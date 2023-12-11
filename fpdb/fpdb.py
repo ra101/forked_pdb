@@ -1,7 +1,7 @@
 import sys
 from pdb import *
 
-class ForkedPdb(Pdb):
+class FPDb(Pdb):
     """
     PDB Subclass that can be used for multiprocessing child as well.
     Suggested in: https://stackoverflow.com/questions/4716533/
@@ -14,10 +14,9 @@ class ForkedPdb(Pdb):
         finally:
             sys.stdin = _stdin
 
-        ForkedPdb().set_trace()
 
 def set_trace(*, header=None):
-    fpdb_obj = ForkedPdb()
+    fpdb_obj = FPDb()
     if header is not None:
         fpdb_obj.message(header)
     fpdb_obj.set_trace(sys._getframe().f_back)

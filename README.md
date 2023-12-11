@@ -1,15 +1,16 @@
 # Forked PDb
-A fork of python-pdb for multiple processes.
 
+A wrapper on python-pdb for forked child processes (multi-threaded and multi-processing code).
+ 
 ### Installation
+
 ```bash
-pip install git+https://github.com/ra101/forked_pdb.git
+pip install git+https://github.com/ra101/fpdb.git
 ```
 
 ### Usage
+
 ```python
-import forked_pdb
-forked_pdb.set_trace()
+import fpdb
+fpdb.set_trace()
 ```
-
-

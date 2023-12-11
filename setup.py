@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name='forked_pdb',
+    name='fpdb',
     version='1.0',
-    packages=['forked_pdb',],
+    packages=['fpdb',],
     license='MIT',
 )
