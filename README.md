@@ -1,6 +1,6 @@
-# Forked PDb
+# FPDb: A Forkable Python Debugger
 
-A wrapper on python-pdb for forked child processes (multi-threaded and multi-processing code).
+A wrapper on python-pdb to debug forked child processes (multi-threaded and multi-processing code).
  
 ### Installation
 
