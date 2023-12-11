@@ -16,6 +16,8 @@ class ForkedPdb(Pdb):
 
         ForkedPdb().set_trace()
 
-
-def set_trace():
-    ForkedPdb().set_trace()
+def set_trace(*, header=None):
+    fpdb_obj = ForkedPdb()
+    if header is not None:
+        fpdb_obj.message(header)
+    fpdb_obj.set_trace(sys._getframe().f_back)
