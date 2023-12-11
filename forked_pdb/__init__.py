@@ -1,1 +1,1 @@
-from forked_pdb import *
+from .forked_pdb import *
