@@ -2,9 +2,9 @@ import sys
 import pdb
 
 
-class FPDb(pdb.Pdb):
+class FPdb(pdb.Pdb):
     """
-    PDB Subclass that can be used for multiprocessing child as well.
+    Pdb Subclass that can be used for multiprocessing children as well.
     Suggested in: https://stackoverflow.com/questions/4716533/
     """
     def interaction(self, *args, **kwargs):
@@ -21,7 +21,7 @@ class FPDb(pdb.Pdb):
 
     class WinStdHandle:
         """
-        Provides Windows OS, a way to read the input from the console.
+        Provides Windows OS, with a way to read the input from the console.
         """
         def __init__(self):
             import win32console
@@ -37,7 +37,7 @@ class FPDb(pdb.Pdb):
 
 
 def set_trace(*, header=None):
-    debugger = FPDb()
+    debugger = FPdb()
     if header is not None:
         debugger.message(header)
     debugger.set_trace(sys._getframe().f_back)
