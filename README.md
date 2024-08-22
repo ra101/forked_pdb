@@ -5,7 +5,7 @@ A wrapper on python-pdb to debug forked child processes as well (multi-threaded 
 ### Installation
 
 ```bash
-pip install git+https://github.com/ra101/fpdb.git
+pip install git+https://github.com/ra101/fpdb.py.git
 ```
 
 ### Usage
