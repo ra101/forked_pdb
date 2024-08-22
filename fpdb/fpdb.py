@@ -1,5 +1,5 @@
-import sys
 import pdb
+import sys
 
 
 class FPdb(pdb.Pdb):
@@ -13,7 +13,7 @@ class FPdb(pdb.Pdb):
             if sys.platform == "win32":
                 sys.stdin = self.WinStdHandle()
             else:
-                sys.stdin = open('/dev/stdin')
+                sys.stdin = open("/dev/stdin")
             pdb.Pdb.interaction(self, *args, **kwargs)
         finally:
             sys.stdin = _stdin
@@ -27,9 +27,9 @@ class FPdb(pdb.Pdb):
             import win32console
 
             self.screenBuffer = win32console.GetStdHandle(
-                win32console.STD_INPUT_HANDLE
+                win32console.STD_INPUT_HANDLE,
             )
-        
+
         def readline(self):
             return self.screenBuffer.ReadConsole(1000)
 
